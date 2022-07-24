@@ -3,8 +3,9 @@ import { motion, useAnimation } from 'framer-motion'
 import Image from 'next/image'
 import { buttonVariants, fromLeft, fromRight } from 'constants/animation'
 import { useInView } from 'react-intersection-observer';
+import Section2Image from 'assets/images/home_entertainment.jpg'
 
-function SectionTwo ({ title1, title2, image, description }) {
+function SectionTwo ({ title1, title2, description }) {
   const {ref, inView} = useInView({
     threshold: 0.7
   });
@@ -30,7 +31,7 @@ function SectionTwo ({ title1, title2, image, description }) {
         animate={leftAnimation}
       >
         <Image
-          src={image}
+          src={Section2Image}
           alt="Section two image"
           className='hidden section-image'
           height={1500}

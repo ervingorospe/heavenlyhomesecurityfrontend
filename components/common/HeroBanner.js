@@ -2,8 +2,9 @@ import React from 'react'
 import { motion } from 'framer-motion'
 import Image from 'next/image'
 import { buttonVariants, button2Variants } from 'constants/animation'
+import BannerImage from 'assets/images/home-banner-image.png'
 
-function HeroBanner ({ firstTitle, secondTitle, image }) {
+function HeroBanner ({ firstTitle, secondTitle }) {
   return (
     <div className='grid grid-cols-1 md:grid-cols-2 gap-0 h-[45rem] hero-banner px-10'>
       <div className='h-full grid content-center'>
@@ -52,7 +53,7 @@ function HeroBanner ({ firstTitle, secondTitle, image }) {
         <div className='flex justify-center'>
           <div className='w-fit mt-14'>
             <Image
-              src={image}
+              src={BannerImage}
               alt="Home Banner Image"
               width={500}
               height={500}

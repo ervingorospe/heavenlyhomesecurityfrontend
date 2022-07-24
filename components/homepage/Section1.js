@@ -3,9 +3,9 @@ import { motion, useAnimation } from 'framer-motion'
 import Image from 'next/image'
 import { buttonVariants, fromLeft, fromRight } from 'constants/animation'
 import { useInView } from 'react-intersection-observer';
+import Section1Image from 'assets/images/monitoranywhere.png'
 
-
-function SectionOne ({ title, image, features }) {
+function SectionOne ({ title, features }) {
   const [enterAnimation, setEnterAnimation] = useState(false)
   const {ref, inView} = useInView({
     threshold: 0.7
@@ -84,7 +84,7 @@ function SectionOne ({ title, image, features }) {
           animate={pictureAnimation}
         >
           <Image
-            src={image}
+            src={Section1Image}
             alt="Section one image"
           />
         </motion.div>
