@@ -5,12 +5,12 @@ import Image from 'next/image'
 import Logo from 'assets/images/logo.svg'
 import Link from 'next/link'
 
-function MainNav() {
+function MainNav({ changeNav }) {
   const [showMenu, setShowMenu] = useState(false)
 
   return (
     <div>
-      <div className='shadow-sm shadow-primary-600 bg-primary-600 w-full fixed text-gray-100 navbar z-40'>
+      <div className={`${ changeNav && ('shadow-sm shadow-primary-600 bg-primary-600') } w-full fixed text-gray-100 navbar z-40`}>
         <div className='flex items-center justify-between bg-white py-8 md:py-4 md:px-10 px-7 mt-2'>
           <div className='relative'>
             <header className='fixed top-4'>
@@ -37,7 +37,7 @@ function MainNav() {
               }
             </ul>
           </nav>
-          <div className='flex'>
+          <div className='flex z-40'>
             <ul className='hidden md:flex'>
               <li className='text-sm nav-link font-bold'>
                 <a href='tel:225-274-1050' className='hover:text-primary-300 duration-75'>225-274-1050</a>
@@ -57,8 +57,8 @@ function MainNav() {
           </div>
         </div>
       </div>
-      <nav className={`fixed w-full mt-10 py-4 flex bg-primary-600 lg:hidden transition-all duration-500 ease-in-out z-10 ${showMenu ? 'top-0' : 'top-[-490px]'}`}>
-        <ul className='grid md:items-left mt-16 text-gray-100'>
+      <nav className={`fixed w-full py-4 flex bg-primary-600 lg:hidden transition-all duration-500 ease-in-out z-30 ${showMenu ? 'top-0' : 'top-[-490px]'}`}>
+        <ul className='grid md:items-left mt-28 text-gray-100'>
           {
             Links.map(link => (
               <li key={link.name} className='md:mr-8 text-sm nav-link py-2 px-7'>

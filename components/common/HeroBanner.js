@@ -2,12 +2,23 @@ import React from 'react'
 import { motion } from 'framer-motion'
 import Image from 'next/image'
 import { buttonVariants, button2Variants } from 'constants/animation'
-import BannerImage from 'assets/images/home-banner-image.png'
+import BannerImage from 'assets/images/heroImage.png'
+import bg1 from 'assets/images/bg1.png'
 
 function HeroBanner ({ firstTitle, secondTitle }) {
   return (
-    <div className='grid grid-cols-1 md:grid-cols-2 gap-0 h-[45rem] hero-banner px-10'>
-      <div className='h-full grid content-center'>
+    <div className='relative grid grid-cols-1 md:grid-cols-2 gap-0 h-[30rem] md:h-[50rem] px-10'>
+      <div className='absolute top-0 left-0 right-0 bottom-0 z-0'>
+        <div className='w-full h-full relative'>
+          <Image
+            src={bg1}
+            alt="bg image"
+            layout='fill'
+            objectFit='cover'
+          />
+        </div>
+      </div>
+      <div className='h-full grid content-center z-10'>
         <div className='grid justify-center'>
           <header className='w-fit mt-14'>
             <motion.h1 
@@ -19,7 +30,7 @@ function HeroBanner ({ firstTitle, secondTitle }) {
               {firstTitle}
             </motion.h1>
             <motion.h2 
-              className='font-heading text-gray-100 hero-text2'
+              className='font-heading text-primary-600 hero-text2'
               initial={{ opacity: 0 }}
               animate={{ opacity: 1, scale: [1, 1.2, 1] }}
               transition={{ type: 'spring' }}
@@ -27,24 +38,24 @@ function HeroBanner ({ firstTitle, secondTitle }) {
               {secondTitle}
             </motion.h2>
           </header>
-          <div className='mt-2'>
+          <div className='mt-2 grid md:flex md:gap-2'>
             <motion.button 
-              className="ml-3 w-8/12 md:w-fit md:ml-0 py-2 md:px-7 md:py-3 buttons bg-primary-600 hover:bg-primary-700 text-gray-100 font-sans"
+              className="w-8/12 md:w-fit md:ml-0 md:px-7 py-2 buttons bg-primary-600 hover:bg-primary-700 text-gray-100 font-sans"
               variants={buttonVariants}
               initial="initial"
               animate="animate"
               whileHover="hover"
             >
-              <i className="fa-solid fa-house-lock mr-1"/> Get a Quote
+              Get a Quote
             </motion.button>
             <motion.button 
-              className="w-8/12 md:w-fit mt-2 md:mt-0 ml-3 py-2 md:px-7 md:py-3 buttons bg-primary-600 hover:bg-primary-700 text-gray-100 font-sans"
+              className="w-8/12 md:w-fit mt-2 md:mt-0 md:px-7 py-2 buttons bg-primary-600 hover:bg-primary-700 text-gray-100 font-sans"
               variants={button2Variants}
               initial="initial"
               animate="animate"
               whileHover="hover"
             >
-              <i className="fa-solid fa-people-group mr-1"/> Join Our Team
+              Join Our Team
             </motion.button>
           </div>
         </div>

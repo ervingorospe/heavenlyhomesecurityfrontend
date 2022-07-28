@@ -21,7 +21,7 @@ function SectionThree ({ title, services }) {
   }, [buttonAnimation, inView, titleAnimation])
 
   return (
-    <section ref={ref} className='grid grid-cols-1 justify-center gap-0 mt-48 px-10'>
+    <section ref={ref} className='grid grid-cols-1 justify-center gap-0 md:mt-10 py-28'>
       <header className='text-center'>
         <motion.h1 
           className='font-heading hero-text text-primary-600'
@@ -35,7 +35,7 @@ function SectionThree ({ title, services }) {
 
       {
         enterAnimation && (
-          <div className='grid m-auto gap-10 mt-10 grid-cols-1 sm:grid-cols-3 w-8/12'>
+          <div className='grid m-auto gap-10 mt-10 grid-cols-1 md:grid-cols-5 lg:px-48'>
             {
               services.map((data,index) => (
                 <motion.div className='text-center my-7' key={index}
@@ -48,7 +48,7 @@ function SectionThree ({ title, services }) {
                   <div>
                     <i className={`${data.icon} text-7xl text-gray-400`}/>
                   </div>
-                  <p className='mt-2 font-bold'>
+                  <p className='w-8/12 mt-2 m-auto font-bold'>
                     {data.description}
                   </p>
                 </motion.div>
@@ -59,7 +59,7 @@ function SectionThree ({ title, services }) {
       }
       
 
-      <div className='text-center mt-14'>
+      <div className='text-center mt-10'>
         <motion.button 
           className="py-2 px-7 md:py-3 buttons bg-primary-600 hover:bg-primary-700 text-gray-100 font-sans"
           variants={buttonVariants}
