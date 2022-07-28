@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "next build && next-sitemap  --config next-sitemap.config.js",
+    "postbuild": "next-sitemap  --config next-sitemap.config.js",
     "start": "next start",
     "lint": "next lint"
   },
@@ -14,6 +15,7 @@
     "framer-motion": "^6.5.1",
     "lodash": "^4.17.21",
     "next": "12.2.2",
+    "next-sitemap": "^3.1.15",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-intersection-observer": "^9.4.0"
