@@ -61,7 +61,7 @@ function SectionThree ({ title, services }) {
 
       <div className='text-center mt-10'>
         <motion.button 
-          className="py-2 px-7 md:py-3 buttons bg-primary-600 hover:bg-primary-700 text-gray-100 font-sans"
+          className="py-2 px-7 buttons bg-primary-600 hover:bg-primary-700 text-gray-100 font-sans"
           variants={buttonVariants}
           initial="initial"
           animate={buttonAnimation}

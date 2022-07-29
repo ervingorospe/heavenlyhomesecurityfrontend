@@ -32,11 +32,11 @@ function Footer () {
         </div>
         
         <motion.button 
-          className="mt-4 px-7 py-3 buttons hover:bg-primary-700 text-gray-100 font-sans footer-button"
+          className="mt-4 px-7 py-2 buttons hover:bg-primary-700 text-gray-100 font-sans footer-button"
           variants={buttonVariants}
           whileHover="hover"
         >
-          Get a Quote <i className="fa-solid fa-arrow-right ml-1"/>
+          Get a Quote
         </motion.button>
       </div>
 

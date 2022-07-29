@@ -3,7 +3,7 @@ import { motion, useAnimation } from 'framer-motion'
 import Image from 'next/image'
 import { buttonVariants, fromLeft, fromRight } from 'constants/animation'
 import { useInView } from 'react-intersection-observer';
-import Section1Image from 'assets/images/secion1Image.png'
+import Section1Image from 'assets/images/secion1Image-min.png'
 
 
 function SectionOne ({ title, features }) {

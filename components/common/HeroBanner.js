@@ -2,8 +2,8 @@ import React from 'react'
 import { motion } from 'framer-motion'
 import Image from 'next/image'
 import { buttonVariants, button2Variants } from 'constants/animation'
-import BannerImage from 'assets/images/heroImage.png'
-import bg1 from 'assets/images/bg1.png'
+import BannerImage from 'assets/images/heroImage-min.png'
+import bg1 from 'assets/images/bg1-min.png'
 
 function HeroBanner ({ firstTitle, secondTitle }) {
   return (

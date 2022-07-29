@@ -3,8 +3,8 @@ import { motion, useAnimation } from 'framer-motion'
 import Image from 'next/image'
 import { buttonVariants, fromLeft, fromRight } from 'constants/animation'
 import { useInView } from 'react-intersection-observer';
-import Section2Image from 'assets/images/section2.png'
-import SideImage from 'assets/images/section_2.png'
+import Section2Image from 'assets/images/section2-min.png'
+import SideImage from 'assets/images/section_2-min.png'
 import ReactMarkdown from 'react-markdown'
 
 function SectionTwo ({ content }) {
