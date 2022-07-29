@@ -37,14 +37,14 @@ body {
   background: linear-gradient(179.08deg, #CA8A04 15.01%, rgba(202, 138, 4, 0.505208) 50.11%, rgba(202, 138, 4, 0) 140.11%);
 }
 
-.hero-text {
+h1, .hero-text {
   font-style: normal;
   font-weight: 700;
   font-size: 50px;
   line-height: 60px;
 }
 
-.hero-text2 {
+h2, .hero-text2 {
   font-style: normal;
   font-weight: 700;
   font-size: 75px;

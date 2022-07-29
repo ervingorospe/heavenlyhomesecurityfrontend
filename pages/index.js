@@ -15,7 +15,6 @@ export async function getStaticProps(context) {
 }
 
 function Home({ homepage }) {
-
   return (
     <PageLayout title="Home" metas={_.get(homepage, "data.attributes.meta")}>
       <HeroBanner 
@@ -27,9 +26,7 @@ function Home({ homepage }) {
         features={_.get(homepage, "data.attributes.section1.feature")} 
       />
       <SectionTwo 
-        title1={_.get(homepage, "data.attributes.section2.title1")} 
-        title2={_.get(homepage, "data.attributes.section2.title2")} 
-        description={_.get(homepage, "data.attributes.section2.description")} 
+        content={_.get(homepage, 'data.attributes.section2')}
       />
       <SectionThree 
         title={_.get(homepage, "data.attributes.section3.title")} 

@@ -4,6 +4,10 @@ export const Links = [
     link: "/"
   },
   {
+    name: "ABOUT",
+    link: "/"
+  },
+  {
     name: "SERVICES",
     link: "/"
   },

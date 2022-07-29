@@ -5,8 +5,9 @@ import { buttonVariants, fromLeft, fromRight } from 'constants/animation'
 import { useInView } from 'react-intersection-observer';
 import Section2Image from 'assets/images/section2.png'
 import SideImage from 'assets/images/section_2.png'
+import ReactMarkdown from 'react-markdown'
 
-function SectionTwo ({ title1, title2, description }) {
+function SectionTwo ({ content }) {
   const {ref, inView} = useInView({
     threshold: 0.7
   });
@@ -59,17 +60,12 @@ function SectionTwo ({ title1, title2, description }) {
           initial="initial"
           animate={rightAnimation}
         >
-          <header className='text-left'>
-            <h1 className='font-heading hero-text text-primary-600'>{title1}</h1>
-            <h2 className='font-heading title2 text-gray-200'>{title2}</h2>
-          </header>
-
-          <article className='w-9/12 font-bold text-gray-200 mt-7'>
-            {description}
-          </article>
+          <ReactMarkdown className='text-gray-200 prose prose-yellow mt-10'>
+            {content}
+          </ReactMarkdown>
 
           <motion.button 
-            className="mt-4 py-2 px-7 buttons bg-primary-600 hover:bg-primary-700 text-gray-100 font-sans"
+            className="mt-10 py-2 px-7 buttons bg-primary-600 hover:bg-primary-700 text-gray-100 font-sans"
             variants={buttonVariants}
             initial="initial"
             animate={animation}
@@ -78,35 +74,6 @@ function SectionTwo ({ title1, title2, description }) {
             Get a Quote
           </motion.button>
         </motion.div>
-      </div>
-      <div className='h-full grid z-10'>
-        
-        {/* <motion.div 
-          className=''
-          variants={fromLeft}
-          initial="initial"
-          animate={leftAnimation}
-        >
-          <div className='w-fit grid justify-center text-center border border-blue-600'>
-            
-
-            <div className='flex justify-center'>
-              
-            </div>
-            
-            <div className='mt-10 text-center'>
-              <motion.button 
-                className="py-2 px-7 md:py-2 buttons bg-primary-600 hover:bg-primary-700 text-gray-100 font-sans"
-                variants={buttonVariants}
-                initial="initial"
-                animate={animation}
-                whileHover="hover"
-              >
-                Get a Quote
-              </motion.button>
-            </div>
-          </div>
-        </motion.div> */}
       </div>
     </section>
   )

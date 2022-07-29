@@ -24,7 +24,7 @@ function SectionThree ({ title, services }) {
     <section ref={ref} className='grid grid-cols-1 justify-center gap-0 md:mt-10 py-28'>
       <header className='text-center'>
         <motion.h1 
-          className='font-heading hero-text text-primary-600'
+          className='font-heading text-primary-600'
           variants={fromBottom}
           initial="initial"
           animate={titleAnimation}

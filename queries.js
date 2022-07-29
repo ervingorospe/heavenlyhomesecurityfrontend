@@ -12,11 +12,7 @@ export const homepageQuery = `{
             description
           }
         },
-        section2 {
-          title1,
-          title2,
-          description
-        },
+        section2,
         section3 {
           title,
           services {

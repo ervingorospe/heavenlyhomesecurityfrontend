@@ -30,7 +30,7 @@ function SectionOne ({ title, features }) {
       <div>
         <header className='w-full text-left'>
           <motion.h1 
-            className='font-heading hero-text text-primary-600'
+            className='font-heading text-primary-600'
             variants={fromLeft}
             initial="initial"
             animate={titleAnimation}

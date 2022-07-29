@@ -10,7 +10,7 @@ import { Links } from 'constants/navs'
 function Footer () {
   return (
     <footer className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-0 md:mt-10 px-10 bg-primary-600 py-20'>
-      <div className='text-center hidden md:grid'>
+      <div className='text-center hidden lg:grid'>
         <Image
           src={footerLogo}
           alt="Footer image"
@@ -36,11 +36,11 @@ function Footer () {
           variants={buttonVariants}
           whileHover="hover"
         >
-          Request a Call <i className="fa-solid fa-arrow-right ml-1"/>
+          Get a Quote <i className="fa-solid fa-arrow-right ml-1"/>
         </motion.button>
       </div>
 
-      <div className='hidden lg:grid w-8/12 mt-2'>
+      <div className='grid w-8/12 mt-2'>
         <nav>
           <header>
             <h2 className='font-heading text-xl text-gray-100'>Menu</h2>
